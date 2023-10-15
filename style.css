@@ -1,0 +1,39 @@
+/* Add CSS for the collapsible container */
+.container {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.container-head {
+    cursor: pointer;
+    display: none; /* Hide the checkbox */
+}
+
+/* Style the label as a button */
+label[for="container-head"] {
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.containter-text {
+    display: none;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Style the label when the checkbox is checked */
+.container-head:checked + label[for="container-head"] {
+    background-color: #555;
+}
+
+/* Style the content when the checkbox is checked */
+.container-head:checked + label[for="container-head"] + .containter-text {
+    display: block;
+}

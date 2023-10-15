@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Professional Landscape Website</title>
+    <style>
+        /* Add CSS for the collapsible container */
+        .container {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .container-head {
+            cursor: pointer;
+        }
+
+        .containter-text {
+            display: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="container-head">
+        <label for="container-head">Introduction</label>
+
+        <div class="containter-text">
+            <p>
+                <h4>Full Name - Sehajpreet Singh Chouhan.</h4>
+                <h4>Class - 11th NM.</h4>
+                <h4>Roll No. - 4127.</h4>
+                <h4>Village - Bahadurpur.</h4>
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript to make the collapsible container work -->
+    <script>
+        const containerHead = document.getElementById('container-head');
+        const containterText = document.querySelector('.containter-text');
+
+        containerHead.addEventListener('change', () => {
+            if (containerHead.checked) {
+                containterText.style.display = 'block';
+            } else {
+                containterText.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
